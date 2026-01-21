@@ -1,0 +1,106 @@
+[
+  {
+    "pattern": "\\b(investment opportunity|guaranteed returns|double your money)\\b.{0,40}\\b(dm|message|contact)\\b",
+    "reason": "Suspicious financial offer with call to contact"
+  },
+  {
+    "pattern": "\\b(crypto|bitcoin|ethereum|USDT)\\b.{0,40}\\b(invest|ROI|profit|returns)\\b",
+    "reason": "Crypto scam language"
+  },
+  {
+    "pattern": "\\b(cashapp|venmo|zelle|paypal\\.me)\\b.{0,40}\\b(send|transfer|payment|giveaway)\\b",
+    "reason": "Phishing for payment platforms"
+  },
+  {
+    "pattern": "\\b(limited time offer|act fast|only today)\\b.{0,40}\\b(sign up|join|buy now)\\b",
+    "reason": "Urgency tactic typical of scams"
+  },
+  {
+    "pattern": "\\b(giveaway|you won|congratulations you have won|claim your prize)\\b.{0,40}\\b(link|click|here)\\b",
+    "reason": "Fake giveaway message"
+  },
+  {
+    "pattern": "\\b(join our telegram|exclusive telegram group|telegram link)\\b",
+    "reason": "Suspicious Telegram promotion"
+  },
+  {
+    "pattern": "\\bi made \\$[0-9]+ (this week|today)\\b.{0,40}\\b(you can too|ask me how)\\b",
+    "reason": "Fake earnings testimonial"
+  },
+  {
+    "pattern": "\\b(boost your server|free members|get 1k members instantly)\\b",
+    "reason": "Server growth spam"
+  },
+  {
+    "pattern": "\\b(cheap nitro|discount nitro|buy nitro here)\\b",
+    "reason": "Fake Nitro promotion"
+  },
+  {
+    "pattern": "\\b(reselling|resell this product|dropshipping opportunity)\\b",
+    "reason": "Reselling scheme"
+  },
+  {
+    "pattern": "\\b(graphic designer here|hit me up for thumbnails|need editing work)\\b.{0,40}\\b(dm|message)\\b",
+    "reason": "Unsolicited graphic services advertisement"
+  },
+  {
+    "pattern": "\\b(i can hack|ddos|crack accounts|get you into any server)\\b",
+    "reason": "Message related to hacking"
+  },
+  {
+    "pattern": "\\b(adult server|nsfw server|18\\+ only|join our sexy community)\\b",
+    "reason": "NSFW/adult content spam"
+  },
+  {
+    "pattern": "\\bmy portfolio: ?https?://[^\\s]+\\b",
+    "reason": "Suspicious portfolio link"
+  },
+  {
+    "pattern": "\\b(open for commissions|i do commissions|dm for prices)\\b.{0,40}\\b(cheap|fast|discount)\\b",
+    "reason": "Unsolicited commission offer"
+  },
+  {
+    "pattern": "\\b(join and get \\$[0-9]+|invite and earn|referral bonus)\\b",
+    "reason": "Invite-to-earn scam"
+  },
+  {
+    "pattern": "\\b(sign up here|free trial|limited beta access)\\b.{0,40}\\b(link|click|here)\\b",
+    "reason": "Suspicious registration attempt"
+  },
+  {
+    "pattern": "\\b(premium only \\$[0-9]+|exclusive access for \\$[0-9]+)\\b",
+    "reason": "Fake premium product scam"
+  },
+  {
+    "pattern": "\\b(free robux|free vbucks|claim your game currency)\\b",
+    "reason": "Game currency scam"
+  },
+  {
+    "pattern": "\\b(message me now|contact me immediately|urgent dm)\\b",
+    "reason": "Insistent contact request"
+  },
+  {
+    "pattern": "https?://ytjobs\\.co/[^\\s]+",
+    "reason": "Suspicious job link (ytjobs.co)"
+  },
+  {
+    "pattern": "\\b(AI-free scripts|keep them watching|get what viewers like)\\b",
+    "reason": "Suspicious content creation pitch"
+  },
+  {
+    "pattern": "\\b(bodycam|crime|luxury|sports|documentaries)\\b.{0,40}\\b(link|watch|exclusive)\\b",
+    "reason": "Message with trendy words to attract clicks"
+  },
+  {
+    "pattern": "\\b(take a peek|you'd like to see|just take a peek)\\b",
+    "reason": "Clickbait language"
+  },
+  {
+    "pattern": "https?://docs\\.google\\.com/document/d/[^\\s]+",
+    "reason": "Google Docs link in unsolicited message"
+  },
+  {
+    "pattern": "\\b(i write 100% AI-free scripts|i get what viewers like|my secret\\?)\\b",
+    "reason": "Sales pitch language"
+  }
+]
