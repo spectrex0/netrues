@@ -1,5 +1,3 @@
----
-
 # 🌴 Netrues Bot
 
 > *A smart, AI-powered Discord bot built with care by [dev0_tokyo](https://discord.com/users/852949329320345620)*  
