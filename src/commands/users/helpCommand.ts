@@ -15,6 +15,9 @@ export default () => {
             { name: '`/avatar`', value: 'Gets the avatar of a user.', inline: true },
             { name: '`-cat`', value: 'Shows random cat images.', inline: true },
             { name: '`-fact`', value: 'Sends an interesting fact.', inline: true },
+            { name: '`-quote`', value: 'Sends a  random quote.', inline: true },
+            { name: '`-meme`', value: 'Sends a random meme.', inline: true },
+            
           )
           .setFooter({ text: 'For more information or ideas, contact the bot administrator.' })
           .setTimestamp();

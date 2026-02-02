@@ -8,7 +8,7 @@ export async function execute(oldMember: GuildMember, newMember: GuildMember) {
   const logChannel = getLogChannel(newMember.guild);
   if (!logChannel) return;
 
-  // Nickname change
+
   if (oldMember.nickname !== newMember.nickname) {
     await logChannel.send({
       embeds: [{
@@ -21,7 +21,6 @@ export async function execute(oldMember: GuildMember, newMember: GuildMember) {
     }).catch(() => {});
   }
 
-  // Role changes
   const addedRoles = newMember.roles.cache.filter(role => !oldMember.roles.cache.has(role.id));
   const removedRoles = oldMember.roles.cache.filter(role => !newMember.roles.cache.has(role.id));
 

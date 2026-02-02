@@ -19,6 +19,8 @@ import { Groq } from "groq-sdk";
 import catImage from "./commands/users/catImage.ts";
 import registerFactCommand from "./commands/users/randomFact.ts";
 import helpCommand from "./commands/users/helpCommand.ts";
+import quote from "./commands/users/quote.ts";
+import meme from "./commands/users/meme.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -107,9 +109,10 @@ async function loadGuildEvents() {
   }
 }
 
+
 function aiBrain() {
   const userMessageHistory = new Map<string, { content: string; time: number }[]>();
-  const userLastWarning = new Map<string, number>(); // Para evitar flood de advertencias
+  const userLastWarning = new Map<string, number>(); 
 
   netrues.on("messageCreate", async (message) => {
     if (message.author.bot || !message.guild) return;
@@ -117,13 +120,12 @@ function aiBrain() {
 
     const now = Date.now();
     const history = userMessageHistory.get(author.id) || [];
-    const recent = history.filter((h) => now - h.time < 10_000); // ventana de 10 segundos
+    const recent = history.filter((h) => now - h.time < 10_000);  
     recent.push({ content, time: now });
     userMessageHistory.set(author.id, recent);
  
     if (recent.length > 4) {
       await message.delete().catch(() => {});
-      // Opcional: enviar advertencia una vez cada 30 segundos
       const lastWarn = userLastWarning.get(author.id) || 0;
       if (now - lastWarn > 30_000) {
         userLastWarning.set(author.id, now);
@@ -278,7 +280,12 @@ async function startBot() {
     registerFactCommand(netrues);
     helpCommand();
     catImage();
+    quote();
+    meme();
     log(`[ONLINE] Bot ready as ${netrues.user?.tag}`);
+    log('')
+    log(`[DEV] Bot under development :>`)
+    log('')
   });
 
   netrues.on("interactionCreate", async (interaction) => {
