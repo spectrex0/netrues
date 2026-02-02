@@ -1,4 +1,0 @@
-Just add more commands and also add a thing where it searches for the newest gaming news and sends
-into the gaming news channel we will make and also searches for the best of deals on products and send that 
-in a specific channel and also finds newest news of the tech world and sends it to a specific channel
- ( all the channels above will be made newly for those news ) and all 3 types must use different channels 

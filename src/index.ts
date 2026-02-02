@@ -12,15 +12,15 @@ import dotenv from "dotenv";
 import { readdir, readFile } from "fs/promises";
 import path, { dirname, join } from "path";
 import { fileURLToPath, pathToFileURL } from "url";
-import ask from "./ask.ts";
-import { systemPrompt } from "./prompt.ts";
+import ask from "./ask.js";
+import { systemPrompt } from "./prompt.js";
 import { Groq } from "groq-sdk";
 
-import catImage from "./commands/users/catImage.ts";
-import registerFactCommand from "./commands/users/randomFact.ts";
-import helpCommand from "./commands/users/helpCommand.ts";
-import quote from "./commands/users/quote.ts";
-import meme from "./commands/users/meme.ts";
+import catImage from "./commands/users/catImage.js";
+import registerFactCommand from "./commands/users/randomFact.js";
+import helpCommand from "./commands/users/helpCommand.js";
+import quote from "./commands/users/quote.js";
+import meme from "./commands/users/meme.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
